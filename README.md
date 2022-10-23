@@ -4,13 +4,21 @@
 #### ipconfig /all
 #### ipconfg /all | findstr DNS
 #### ipconfig /release
+- Releases current IP address from use
 #### ipconfig /renew
+- Refreshes the IP address with new IP
 #### ipconfig /release "INTERFACE"
+- Specify which adapter to release the IP address for
 #### ipconfig /displaydns
+- Shows DNS server in use
 #### ipconfig /displaydns | clip
+- Copies all DNS information to clip board
 #### ipconfig /flushdns
+- Flushes DNS cache 
 #### nslookup google.com
+- Provide basic IP information for specified domain
 #### nslookup google.com 8.8.8.8
+- Specifies the IP information for specified domain using a specific DNS server
 #### nslookup -type=mx 
 - you can use regular DNS record choices here
 #### cls 
