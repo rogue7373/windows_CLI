@@ -95,76 +95,100 @@ chkdsk /f
 ~~~
 chkdsk /r 
 ~~~
-#### Scan 
+#### Scan Files 
 ~~~
 sfc /scannnow
 ~~~
+### DISM
+#### Online Health Scan 
 ~~~
 DISM /Online /Cleanup-Image /ScanHealth
 ~~~
+#### Online Health Restore
 ~~~
 DISM /Online /Cleanup-Image /RestoreHealth
 ~~~
+#### Find Running Tasks / Scripts
 ~~~
 tasklist | findstr script
 ~~~
+#### Kill Specific Tasks
 ~~~
 taskkill /f /pid 
 ~~~
 
 ### NETSH
+#### WLAN Information
 ~~~
 netsh wlan show wlanreport
 ~~~
+#### Interace Information
 ~~~
 netsh interface show interface
 ~~~
+#### Interace IP address information
 ~~~
 netsh interface ip show address | findstr "IP Address"
 ~~~
+#### Interace DNS information
 ~~~
 netsh interface ip show dnsservers 
 ~~~
+#### Disable Windows Firewall
 ~~~
 netsh advfirewall set allprofiles state off
 ~~~
+#### Enable Windows Firewall
 ~~~
 netsh advfirewall set allprofiles state on
 ~~~
 ### Network Troubleshooting 
+#### Basic Connectivity 
 ~~~
 ping google.com
 ~~~
+#### Continuous Ping
 ~~~
 ping -t google.com 
 ~~~
+#### Follow the path taken to a specific domain or host
 ~~~
 tracert google.com 
 ~~~
+#### Follow the path taken to a specific domain or host without resolving the DNS for each hop (FASTER)
 ~~~
 tracert -d google.com
 ~~~
+### NETSTAT
+#### Network statistics
 ~~~
 netstat 
 ~~~
+#### Display all conneections, listneing ports, and FQDN
 ~~~
 netstat -af
 ~~~
+#### Display the process (PID) for the connection
 ~~~
 netstat -o 
 ~~~
+#### Displays current statistics and offload state, refreshing every 5 seconds
 ~~~
 netstat -e -t 5 
 ~~~
+#### Print route table for host 
 ~~~
 route print 
 ~~~
+#### Add route to host routing table
 ~~~
 route add 192.1.1.1. mask 255.255.255.255 
 ~~~
+#### Delete host from routing table 
 ~~~
 route delete 192.1.1.1
 ~~~
+#### Shutdown and restarting directly to BIOS
 ~~~
 shutdown /r /fw /f /t 0 
 ~~~
