@@ -6,7 +6,9 @@
 #### ipconfig /release
 - Releases current IP address from use
 #### IP Address Renewal
-'ipconfig /renew'
+'''
+ipconfig /renew
+'''
 - Refreshes the IP address with new IP
 #### ipconfig /release "INTERFACE"
 - Specify which adapter to release the IP address for
