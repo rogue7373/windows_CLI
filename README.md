@@ -5,7 +5,8 @@
 #### ipconfg /all | findstr DNS
 #### ipconfig /release
 - Releases current IP address from use
-#### 'ipconfig /renew'
+#### IP Address Renewal
+'ipconfig /renew'
 - Refreshes the IP address with new IP
 #### ipconfig /release "INTERFACE"
 - Specify which adapter to release the IP address for
